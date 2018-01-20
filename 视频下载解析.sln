@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27130.2020
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "V视频助手", "V视频助手\V视频助手.csproj", "{96BFA34E-8501-4D18-849F-7F3A7D75FD30}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{96BFA34E-8501-4D18-849F-7F3A7D75FD30}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{96BFA34E-8501-4D18-849F-7F3A7D75FD30}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{96BFA34E-8501-4D18-849F-7F3A7D75FD30}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{96BFA34E-8501-4D18-849F-7F3A7D75FD30}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {16BDE228-3B3C-48CD-90A3-20330EB2B129}
+	EndGlobalSection
+EndGlobal
