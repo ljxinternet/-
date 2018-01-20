@@ -30,7 +30,7 @@ namespace V视频助手
 
         private void textBox_SiteUrl_DoubleClick(object sender, EventArgs e)
         {
-            Process.Start("http://v.ranks.xin");
+            
         }
 
         private void Btn_ChiceFile_Click(object sender, EventArgs e)
