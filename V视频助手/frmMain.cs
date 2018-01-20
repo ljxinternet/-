@@ -110,7 +110,21 @@ namespace V视频助手
 
         private void Btn_JieXi_Click(object sender, EventArgs e)
         {
-
+            UrlJieXi jx = new UrlJieXi();
+            //MessageBox.Show(jx.getWebTitle(TextBox_Url.Text));
+            Action ac = new Action(() =>
+              {
+              string text = jx.getWebTitle(TextBox_Url.Text);
+            if (this.InvokeRequired)
+                  {
+                      this.BeginInvoke(new Action(() =>
+                      {
+                          linkLabel_JXResult.Text = text;
+                      }), null);
+                  }
+              });
+            ac.BeginInvoke(null, null);
+            
         }
 
         private void Btn_StartDownLoad_Click(object sender, EventArgs e)
