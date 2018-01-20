@@ -22,17 +22,5 @@ namespace V视频助手.Properties {
                 return defaultInstance;
             }
         }
-        
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("C:\\Program Files (x86)\\Internet Download Manager\\IDMan.exe")]
-        public string DownLoader {
-            get {
-                return ((string)(this["DownLoader"]));
-            }
-            set {
-                this["DownLoader"] = value;
-            }
-        }
     }
 }

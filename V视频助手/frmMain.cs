@@ -23,7 +23,7 @@ namespace V视频助手
 
         #region 定义变量
 
-
+        string _downLoaderPath = null;
 
         #endregion
 
@@ -42,6 +42,7 @@ namespace V视频助手
             if (file.ShowDialog() == DialogResult.OK)
             {
                 textBox_DownLoaderPath.Text = file.FileName;
+                _downLoaderPath = file.FileName;
             }
         }
 
@@ -51,14 +52,69 @@ namespace V视频助手
             {
                 Configuration config = System.Configuration.ConfigurationManager.OpenExeConfiguration(ConfigurationUserLevel.None);
 
-                config.
-            }
-            catch (Exception)
-            {
+                _downLoaderPath = config.AppSettings.Settings["DownLoader"].Value;
 
-                throw;
+                textBox_DownLoaderPath.Text = _downLoaderPath;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                //throw;
             }
             
+
+        }
+
+        private void Btn_SaveFiePath_Click(object sender, EventArgs e)
+        {
+            if (textBox_DownLoaderPath.Text == string.Empty || textBox_DownLoaderPath.Text == null)
+            {
+                return;
+            }
+            try
+            {
+                Configuration config = System.Configuration.ConfigurationManager.OpenExeConfiguration(ConfigurationUserLevel.None);
+                config.AppSettings.Settings["DownLoader"].Value = textBox_DownLoaderPath.Text;
+                config.Save(ConfigurationSaveMode.Modified);
+                System.Configuration.ConfigurationManager.RefreshSection("appSettings");
+                MessageBox.Show("保存成功!");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                //throw;
+            }
+            
+
+            
+        }
+
+        private void Btn_Paste_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (!Clipboard.ContainsText())
+                {
+                    return;
+                }
+                
+                TextBox_Url.Text = Clipboard.GetText();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                //throw;
+            }
+            
+        }
+
+        private void Btn_JieXi_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Btn_StartDownLoad_Click(object sender, EventArgs e)
+        {
 
         }
     }

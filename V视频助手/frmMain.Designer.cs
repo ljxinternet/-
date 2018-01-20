@@ -29,11 +29,11 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.Btn_DownLoad = new System.Windows.Forms.Button();
-            this.Btn_Pause = new System.Windows.Forms.Button();
+            this.Btn_StartDownLoad = new System.Windows.Forms.Button();
+            this.Btn_Paste = new System.Windows.Forms.Button();
             this.textBox_SiteUrl = new System.Windows.Forms.TextBox();
             this.Btn_JieXi = new System.Windows.Forms.Button();
-            this.TxtBox_Url = new System.Windows.Forms.TextBox();
+            this.TextBox_Url = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.Btn_SaveFiePath = new System.Windows.Forms.Button();
@@ -51,11 +51,11 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.Btn_DownLoad);
-            this.groupBox1.Controls.Add(this.Btn_Pause);
+            this.groupBox1.Controls.Add(this.Btn_StartDownLoad);
+            this.groupBox1.Controls.Add(this.Btn_Paste);
             this.groupBox1.Controls.Add(this.textBox_SiteUrl);
             this.groupBox1.Controls.Add(this.Btn_JieXi);
-            this.groupBox1.Controls.Add(this.TxtBox_Url);
+            this.groupBox1.Controls.Add(this.TextBox_Url);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox1.Location = new System.Drawing.Point(3, 3);
@@ -65,23 +65,25 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "解析区";
             // 
-            // Btn_DownLoad
+            // Btn_StartDownLoad
             // 
-            this.Btn_DownLoad.Location = new System.Drawing.Point(489, 45);
-            this.Btn_DownLoad.Name = "Btn_DownLoad";
-            this.Btn_DownLoad.Size = new System.Drawing.Size(75, 23);
-            this.Btn_DownLoad.TabIndex = 5;
-            this.Btn_DownLoad.Text = "下载";
-            this.Btn_DownLoad.UseVisualStyleBackColor = true;
+            this.Btn_StartDownLoad.Location = new System.Drawing.Point(489, 45);
+            this.Btn_StartDownLoad.Name = "Btn_StartDownLoad";
+            this.Btn_StartDownLoad.Size = new System.Drawing.Size(75, 23);
+            this.Btn_StartDownLoad.TabIndex = 5;
+            this.Btn_StartDownLoad.Text = "下载";
+            this.Btn_StartDownLoad.UseVisualStyleBackColor = true;
+            this.Btn_StartDownLoad.Click += new System.EventHandler(this.Btn_StartDownLoad_Click);
             // 
-            // Btn_Pause
+            // Btn_Paste
             // 
-            this.Btn_Pause.Location = new System.Drawing.Point(408, 45);
-            this.Btn_Pause.Name = "Btn_Pause";
-            this.Btn_Pause.Size = new System.Drawing.Size(75, 23);
-            this.Btn_Pause.TabIndex = 4;
-            this.Btn_Pause.Text = "粘贴";
-            this.Btn_Pause.UseVisualStyleBackColor = true;
+            this.Btn_Paste.Location = new System.Drawing.Point(408, 45);
+            this.Btn_Paste.Name = "Btn_Paste";
+            this.Btn_Paste.Size = new System.Drawing.Size(75, 23);
+            this.Btn_Paste.TabIndex = 4;
+            this.Btn_Paste.Text = "粘贴";
+            this.Btn_Paste.UseVisualStyleBackColor = true;
+            this.Btn_Paste.Click += new System.EventHandler(this.Btn_Paste_Click);
             // 
             // textBox_SiteUrl
             // 
@@ -103,13 +105,14 @@
             this.Btn_JieXi.TabIndex = 2;
             this.Btn_JieXi.Text = "解析";
             this.Btn_JieXi.UseVisualStyleBackColor = true;
+            this.Btn_JieXi.Click += new System.EventHandler(this.Btn_JieXi_Click);
             // 
-            // TxtBox_Url
+            // TextBox_Url
             // 
-            this.TxtBox_Url.Location = new System.Drawing.Point(71, 17);
-            this.TxtBox_Url.Name = "TxtBox_Url";
-            this.TxtBox_Url.Size = new System.Drawing.Size(412, 21);
-            this.TxtBox_Url.TabIndex = 1;
+            this.TextBox_Url.Location = new System.Drawing.Point(71, 17);
+            this.TextBox_Url.Name = "TextBox_Url";
+            this.TextBox_Url.Size = new System.Drawing.Size(412, 21);
+            this.TextBox_Url.TabIndex = 1;
             // 
             // label1
             // 
@@ -142,6 +145,7 @@
             this.Btn_SaveFiePath.TabIndex = 3;
             this.Btn_SaveFiePath.Text = "保存路径";
             this.Btn_SaveFiePath.UseVisualStyleBackColor = true;
+            this.Btn_SaveFiePath.Click += new System.EventHandler(this.Btn_SaveFiePath_Click);
             // 
             // Btn_ChiceFile
             // 
@@ -237,14 +241,14 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.TextBox textBox_SiteUrl;
         private System.Windows.Forms.Button Btn_JieXi;
-        private System.Windows.Forms.TextBox TxtBox_Url;
+        private System.Windows.Forms.TextBox TextBox_Url;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
-        private System.Windows.Forms.Button Btn_Pause;
+        private System.Windows.Forms.Button Btn_Paste;
         private System.Windows.Forms.LinkLabel linkLabel_JXResult;
-        private System.Windows.Forms.Button Btn_DownLoad;
+        private System.Windows.Forms.Button Btn_StartDownLoad;
         private System.Windows.Forms.Button Btn_SaveFiePath;
         private System.Windows.Forms.Button Btn_ChiceFile;
         private System.Windows.Forms.TextBox textBox_DownLoaderPath;

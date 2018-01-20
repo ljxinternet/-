@@ -1,9 +1,5 @@
 ﻿<?xml version='1.0' encoding='utf-8'?>
-<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="V视频助手.Properties" GeneratedClassName="Settings">
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)">
   <Profiles />
-  <Settings>
-    <Setting Name="DownLoader" Type="System.String" Scope="User">
-      <Value Profile="(Default)">C:\Program Files (x86)\Internet Download Manager\IDMan.exe</Value>
-    </Setting>
-  </Settings>
+  <Settings />
 </SettingsFile>
